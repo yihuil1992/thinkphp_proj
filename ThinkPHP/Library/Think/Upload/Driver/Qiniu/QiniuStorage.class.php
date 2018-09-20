@@ -63,7 +63,7 @@
 			if (!empty($param['EndUser'])) {
 				$data['endUser'] = $param['EndUser'];
 			}
-			$data = json_encode($data);
+			$data = JSON_encode($data);
 			return self::SignWithData($sk, $ak, $data);
 		}
 
@@ -311,7 +311,7 @@
 	        foreach($headers as $header) {
 	            $header = trim($header);
 	            if(strpos($header, '{') !== False){
-	                $items = json_decode($header, 1);
+	                $items = JSON_decode($header, 1);
 	                break;
 	            }
 	        }
@@ -327,7 +327,7 @@
 	        list($v, $code, $message) = explode(" ", $status, 3);
 	        $message = is_null($message) ? 'File Not Found' : "[{$status}]:{$message}]";
 	        $this->error = $message;
-	        $this->errorStr = json_decode($body ,1);
+	        $this->errorStr = JSON_decode($body ,1);
 	        $this->errorStr = $this->errorStr['error'];
 	    }
 	}

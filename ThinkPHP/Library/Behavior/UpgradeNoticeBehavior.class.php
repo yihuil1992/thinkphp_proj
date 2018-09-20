@@ -105,7 +105,7 @@ class UpgradeNoticeBehavior {
             return false;
         }
         curl_close($ch);
-        $ret = json_decode($txt, true);
+        $ret = JSON_decode($txt, true);
         if (!$ret) {
             trace('接口[' . $url . ']返回格式不正确', '升级通知出错', 'NOTIC', true);
             

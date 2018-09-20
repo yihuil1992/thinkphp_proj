@@ -302,9 +302,9 @@ class BaiduBCS {
 
 	/**
 	 * 设置bucket的acl，有三种模式，
-	 * (1).设置详细json格式的acl；
-	 * a. $acl 为json的array
-	 * b. $acl 为json的string
+	 * (1).设置详细JSON格式的acl；
+	 * a. $acl 为JSON的array
+	 * b. $acl 为JSON的string
 	 * (2).通过acl_type字段进行设置
 	 * a. $acl 为BaiduBCS::$ACL_TYPES中的字段
 	 * @param string $bucket (Required)
@@ -562,7 +562,7 @@ class BaiduBCS {
 		unset ( $opt ['fileUpload'] );
 		unset ( $opt ['length'] );
 		unset ( $opt ['seekTo'] );
-		$opt ['content'] = self::array_to_json ( $object_list );
+		$opt ['content'] = self::array_to_JSON ( $object_list );
 		$opt [self::QUERY_STRING] = array (
 				"superfile" => 1 );
 		$opt [self::OBJECT] = $object;
@@ -828,9 +828,9 @@ class BaiduBCS {
 
 	/**
 	 * 设置object的acl，有三种模式，
-	 * (1).设置详细json格式的acl；
-	 * a. $acl 为json的array
-	 * b. $acl 为json的string
+	 * (1).设置详细JSON格式的acl；
+	 * a. $acl 为JSON的array
+	 * b. $acl 为JSON的string
 	 * (2).通过acl_type字段进行设置
 	 * a. $acl 为BaiduBCS::$ACL_ACTIONS中的字段
 	 * @param string $bucket (Required)
@@ -1120,23 +1120,23 @@ class BaiduBCS {
 	}
 
 	/**
-	 * 由数组构造json字符串，增加了一些特殊处理以支持特殊字符和不同编码的中文
+	 * 由数组构造JSON字符串，增加了一些特殊处理以支持特殊字符和不同编码的中文
 	 * @param array $array
 	 */
-	private static function array_to_json($array) {
+	private static function array_to_JSON($array) {
 		if (! is_array ( $array )) {
-			throw new BCS_Exception ( "Param must be array in function array_to_json()", - 1 );
+			throw new BCS_Exception ( "Param must be array in function array_to_JSON()", - 1 );
 		}
 		self::array_recursive ( $array, 'addslashes', false );
 		self::array_recursive ( $array, 'rawurlencode', false );
-		return rawurldecode ( json_encode ( $array ) );
+		return rawurldecode ( JSON_encode ( $array ) );
 	}
 
 	/**
 	 * 根据用户传入的acl，进行相应的处理
-	 * (1).设置详细json格式的acl；
-	 * a. $acl 为json的array
-	 * b. $acl 为json的string
+	 * (1).设置详细JSON格式的acl；
+	 * a. $acl 为JSON的array
+	 * b. $acl 为JSON的string
 	 * (2).通过acl_type字段进行设置
 	 * @param string|array $acl
 	 * @throws BCS_Exception
@@ -1201,10 +1201,10 @@ class BaiduBCS {
 	}
 
 	/**
-	 * 检查用户输入的acl array是否合法，并转为json
+	 * 检查用户输入的acl array是否合法，并转为JSON
 	 * @param array $acl
 	 * @throws BCS_Exception
-	 * @return string acl-json
+	 * @return string acl-JSON
 	 */
 	private function check_user_acl($acl) {
 		if (! is_array ( $acl )) {
@@ -1231,7 +1231,7 @@ class BaiduBCS {
 			}
 		}
 
-		return self::array_to_json ( $acl );
+		return self::array_to_JSON ( $acl );
 	}
 
 	/**

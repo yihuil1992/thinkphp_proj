@@ -2,13 +2,13 @@
 <html>
 <head>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="/Application/Home/Public/Js/findByZip.js"></script>
-<link rel="stylesheet" type="text/css" href="/Application/Home/Public/CSS/stylesheet.css" />
+<script type="text/javascript" src="/thinkphp/Public/js/findByZip.js"></script>
+<link rel="stylesheet" type="text/css" href="/thinkphp/Public/css/stylesheet.css" />
 	<title>Find Restaurants</title>
 	<meta charset="utf-8">
 </head>
 <body>
-<a href="/index.php/Home/Rest" style="position:absolute;right:5px;top: 5px;">Restuarants</a>
+<a href="<?php echo U('index');?>" style="position:absolute;right:5px;top: 5px;">Restuarants</a>
 <form id="dataForm" action="" method="POST" onsubmit="return validate()">
 	<ul>
 		<li>

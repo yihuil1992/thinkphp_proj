@@ -3,12 +3,12 @@
 <head>
 	<title>Find Restaurants</title>
 <load href='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' />
-<load href="__PUBLIC__/CSS/stylesheet.css"/>
-<load href="__PUBLIC__/Js/findByAddr.js"/>
+<load href="__PUBLIC__/css/stylesheet.css"/>
+<load href="__PUBLIC__/js/findByAddr.js"/>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNBFH1IlNnjDNnu12pe009XUbEgCdyDEY&language=en&region=US&libraries=places&callback=initMap" async defer></script>
 </head>
 <body>
-	<a href="__CONTROLLER__" style="position:absolute;right:5px;top: 5px;">Restuarants</a>
+	<a href="{:U('index')}" style="position:absolute;right:5px;top: 5px;">Restuarants</a>
 	<h1>Welcome.</h1>
 	<p>Please click your position on the map</p>
 	<div id="map" style="width: 48%;float: left;margin-right: 15px;"></div>

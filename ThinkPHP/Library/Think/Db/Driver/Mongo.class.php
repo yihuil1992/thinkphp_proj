@@ -120,7 +120,7 @@ class Mongo extends Driver {
         try{
             if($this->config['debug']) {
                 $this->queryStr   =  $this->_dbName.'.'.$this->_collectionName.'.runCommand(';
-                $this->queryStr  .=  json_encode($command);
+                $this->queryStr  .=  JSON_encode($command);
                 $this->queryStr  .=  ')';
             }
             $this->debug(true);
@@ -199,7 +199,7 @@ class Mongo extends Driver {
         N('db_write',1); // 兼容代码        
         if($this->config['debug']) {
             $this->queryStr   =  $this->_dbName.'.'.$this->_collectionName.'.insert(';
-            $this->queryStr   .= $data?json_encode($data):'{}';
+            $this->queryStr   .= $data?JSON_encode($data):'{}';
             $this->queryStr   .= ')';
         }
         try{
@@ -282,8 +282,8 @@ class Mongo extends Driver {
         $set  =  $this->parseSet($data);
         if($this->config['debug']) {
             $this->queryStr   =  $this->_dbName.'.'.$this->_collectionName.'.update(';
-            $this->queryStr   .= $query?json_encode($query):'{}';
-            $this->queryStr   .=  ','.json_encode($set).')';
+            $this->queryStr   .= $query?JSON_encode($query):'{}';
+            $this->queryStr   .=  ','.JSON_encode($set).')';
         }
         try{
             $this->debug(true);
@@ -315,7 +315,7 @@ class Mongo extends Driver {
         $this->executeTimes++;
         N('db_write',1); // 兼容代码        
         if($this->config['debug']) {
-            $this->queryStr   =  $this->_dbName.'.'.$this->_collectionName.'.remove('.json_encode($query).')';
+            $this->queryStr   =  $this->_dbName.'.'.$this->_collectionName.'.remove('.JSON_encode($query).')';
         }
         try{
             $this->debug(true);
@@ -371,12 +371,12 @@ class Mongo extends Driver {
         try{
             if($this->config['debug']) {
                 $this->queryStr   =  $this->_dbName.'.'.$this->_collectionName.'.find(';
-                $this->queryStr  .=  $query? json_encode($query):'{}';
+                $this->queryStr  .=  $query? JSON_encode($query):'{}';
                 if(is_array($field) && count($field)) {
                     foreach ($field as $f=>$v)
                         $_field_array[$f] = $v ? 1 : 0;
 
-                    $this->queryStr  .=  $field? ', '.json_encode($_field_array):', {}';
+                    $this->queryStr  .=  $field? ', '.JSON_encode($_field_array):', {}';
                 }
                 $this->queryStr  .=  ')';
             }
@@ -385,7 +385,7 @@ class Mongo extends Driver {
             if(!empty($options['order'])) {
                 $order   =  $this->parseOrder($options['order']);
                 if($this->config['debug']) {
-                    $this->queryStr .= '.sort('.json_encode($order).')';
+                    $this->queryStr .= '.sort('.JSON_encode($order).')';
                 }
                 $_cursor =  $_cursor->sort($order);
             }
@@ -446,7 +446,7 @@ class Mongo extends Driver {
         $query  =  $this->parseWhere(isset($options['where'])?$options['where']:array());
         if($this->config['debug']) {
             $this->queryStr   =  $this->_dbName.'.'.$this->_collectionName;
-            $this->queryStr   .= $query?'.find('.json_encode($query).')':'';
+            $this->queryStr   .= $query?'.find('.JSON_encode($query).')':'';
             $this->queryStr   .= '.count()';
         }
         try{
@@ -479,10 +479,10 @@ class Mongo extends Driver {
         $query  =  $this->parseWhere(isset($options['where'])?$options['where']:array());
         
         if($this->config['debug']) {
-            $this->queryStr   =  $this->_dbName.'.'.$this->_collectionName.'.group({key:'.json_encode($keys).',cond:'.
-            json_encode($options['condition']) . ',reduce:' .
-            json_encode($reduce).',initial:'.
-            json_encode($initial).'})';
+            $this->queryStr   =  $this->_dbName.'.'.$this->_collectionName.'.group({key:'.JSON_encode($keys).',cond:'.
+            JSON_encode($options['condition']) . ',reduce:' .
+            JSON_encode($reduce).',initial:'.
+            JSON_encode($initial).'})';
         }
         try{
             $this->debug(true);

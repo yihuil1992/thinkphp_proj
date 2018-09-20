@@ -68,8 +68,8 @@ function load_config($file,$parse=CONF_PARSE){
             return yaml_parse_file($file);
         case 'xml': 
             return (array)simplexml_load_file($file);
-        case 'json':
-            return json_decode(file_get_contents($file), true);
+        case 'JSON':
+            return JSON_decode(file_get_contents($file), true);
         default:
             if(function_exists($parse)){
                 return $parse($file);
@@ -1393,7 +1393,7 @@ function cookie($name='', $value='', $option=null) {
             $value =    $_COOKIE[$name];
             if(0===strpos($value,'think:')){
                 $value  =   substr($value,6);
-                return array_map('urldecode',json_decode(MAGIC_QUOTES_GPC?stripslashes($value):$value,true));
+                return array_map('urldecode',JSON_decode(MAGIC_QUOTES_GPC?stripslashes($value):$value,true));
             }else{
                 return $value;
             }
@@ -1407,7 +1407,7 @@ function cookie($name='', $value='', $option=null) {
         } else {
             // 设置cookie
             if(is_array($value)){
-                $value  = 'think:'.json_encode(array_map('urlencode',$value));
+                $value  = 'think:'.JSON_encode(array_map('urlencode',$value));
             }
             $expire = !empty($config['expire']) ? time() + intval($config['expire']) : 0;
             setcookie($name, $value, $expire, $config['path'], $config['domain'],$config['secure'],$config['httponly']);

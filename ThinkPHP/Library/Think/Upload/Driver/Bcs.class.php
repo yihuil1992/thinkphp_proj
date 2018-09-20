@@ -196,7 +196,7 @@ class Bcs {
      * @return array        响应数据列表
      */
     private function response($text){
-        $items = json_decode($text, true);
+        $items = JSON_decode($text, true);
         return $items;
     }
 
@@ -219,7 +219,7 @@ class Bcs {
         );
         $response = $this->request($this->apiurl.'?'.http_build_query($param), 'POST');
         if($response)
-            $response = json_decode($response, true);
+            $response = JSON_decode($response, true);
         return $response['content'][$method];
     }
 

@@ -24,13 +24,13 @@ class RestController extends Controller {
     // REST默认请求类型
     protected   $defaultMethod  =   'get';
     // REST允许请求的资源类型列表
-    protected   $allowType      =   array('html','xml','json','rss'); 
+    protected   $allowType      =   array('html','xml','JSON','rss');
     // 默认的资源类型
     protected   $defaultType    =   'html';
     // REST允许输出的资源类型列表
     protected   $allowOutputType=   array(  
                     'xml' => 'application/xml',
-                    'json' => 'application/json',
+                    'JSON' => 'application/JSON',
                     'html' => 'text/html',
                 );
 
@@ -97,7 +97,7 @@ class RestController extends Controller {
     protected function getAcceptType(){
         $type = array(
             'xml'   =>  'application/xml,text/xml,application/x-xml',
-            'json'  =>  'application/json,text/x-json,application/jsonrequest,text/json',
+            'JSON'  =>  'application/JSON,text/x-JSON,application/JSONrequest,text/JSON',
             'js'    =>  'text/javascript,application/javascript,application/x-javascript',
             'css'   =>  'text/css',
             'rss'   =>  'application/rss+xml',
@@ -190,9 +190,9 @@ class RestController extends Controller {
      */
     protected function encodeData($data,$type='') {
         if(empty($data))  return '';
-        if('json' == $type) {
+        if('JSON' == $type) {
             // 返回JSON数据格式到客户端 包含状态信息
-            $data = json_encode($data);
+            $data = JSON_encode($data);
         }elseif('xml' == $type){
             // 返回xml格式数据
             $data = xml_encode($data);

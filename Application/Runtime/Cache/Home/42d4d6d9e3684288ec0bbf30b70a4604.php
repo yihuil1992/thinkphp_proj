@@ -3,12 +3,12 @@
 <head>
 	<title>Find Restaurants</title>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="/Application/Home/Public/CSS/stylesheet.css" />
-<script type="text/javascript" src="/Application/Home/Public/Js/findByAddr.js"></script>
+<link rel="stylesheet" type="text/css" href="/thinkphp/Public/css/stylesheet.css" />
+<script type="text/javascript" src="/thinkphp/Public/js/findByAddr.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNBFH1IlNnjDNnu12pe009XUbEgCdyDEY&language=en&region=US&libraries=places&callback=initMap" async defer></script>
 </head>
 <body>
-	<a href="/index.php/Home/Rest" style="position:absolute;right:5px;top: 5px;">Restuarants</a>
+	<a href="<?php echo U('index');?>" style="position:absolute;right:5px;top: 5px;">Restuarants</a>
 	<h1>Welcome.</h1>
 	<p>Please click your position on the map</p>
 	<div id="map" style="width: 48%;float: left;margin-right: 15px;"></div>

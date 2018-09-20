@@ -504,7 +504,7 @@ class FirePHP {
     protected $options = array('maxDepth' => 10,
                                'maxObjectDepth' => 5,
                                'maxArrayDepth' => 5,
-                               'useNativeJsonEncode' => true,
+                               'useNativeJSONEncode' => true,
                                'includeLineNumbers' => true);
 
     /**
@@ -513,8 +513,8 @@ class FirePHP {
      * @var array
      */
     protected $objectFilters = array(
-        'firephp' => array('objectStack', 'instance', 'json_objectStack'),
-        'firephp_test_class' => array('objectStack', 'instance', 'json_objectStack')
+        'firephp' => array('objectStack', 'instance', 'JSON_objectStack'),
+        'firephp_test_class' => array('objectStack', 'instance', 'JSON_objectStack')
     );
 
     /**
@@ -643,7 +643,7 @@ class FirePHP {
      *  - maxDepth: The maximum depth to traverse (default: 10)
      *  - maxObjectDepth: The maximum depth to traverse objects (default: 5)
      *  - maxArrayDepth: The maximum depth to traverse arrays (default: 5)
-     *  - useNativeJsonEncode: If true will use json_encode() (default: true)
+     *  - useNativeJSONEncode: If true will use JSON_encode() (default: true)
      *  - includeLineNumbers: If true will include line numbers and filenames (default: true)
      * 
      * @param array $Options The options to be set
@@ -1281,7 +1281,7 @@ class FirePHP {
             unset($meta['line']);
         }
 
-        $this->setHeader('X-Wf-Protocol-1','http://meta.wildfirehq.org/Protocol/JsonStream/0.2');
+        $this->setHeader('X-Wf-Protocol-1','http://meta.wildfirehq.org/Protocol/JSONStream/0.2');
         $this->setHeader('X-Wf-1-Plugin-1','http://meta.firephp.org/Wildfire/Plugin/FirePHP/Library-FirePHPCore/'.self::VERSION);
      
         $structure_index = 1;
@@ -1293,7 +1293,7 @@ class FirePHP {
         }
       
         if ($Type==self::DUMP) {
-            $msg = '{"'.$Label.'":'.$this->jsonEncode($Object, $skipFinalObjectEncode).'}';
+            $msg = '{"'.$Label.'":'.$this->JSONEncode($Object, $skipFinalObjectEncode).'}';
         } else {
             $msg_meta = $Options;
             $msg_meta['Type'] = $Type;
@@ -1306,7 +1306,7 @@ class FirePHP {
             if (isset($meta['line']) && !isset($msg_meta['Line'])) {
                 $msg_meta['Line'] = $meta['line'];
             }
-            $msg = '['.$this->jsonEncode($msg_meta).','.$this->jsonEncode($Object, $skipFinalObjectEncode).']';
+            $msg = '['.$this->JSONEncode($msg_meta).','.$this->JSONEncode($Object, $skipFinalObjectEncode).']';
         }
         
         $parts = explode("\n",chunk_split($msg, 5000, "\n"));
@@ -1481,18 +1481,18 @@ class FirePHP {
      * @param object $Object The object to be encoded
      * @return string The JSON string
      */
-    public function jsonEncode($Object, $skipObjectEncode = false)
+    public function JSONEncode($Object, $skipObjectEncode = false)
     {
         if (!$skipObjectEncode) {
             $Object = $this->encodeObject($Object);
         }
         
-        if (function_exists('json_encode')
-           && $this->options['useNativeJsonEncode']!=false) {
+        if (function_exists('JSON_encode')
+           && $this->options['useNativeJSONEncode']!=false) {
     
-            return json_encode($Object);
+            return JSON_encode($Object);
         } else {
-            return $this->json_encode($Object);
+            return $this->JSON_encode($Object);
         }
     }
 
@@ -1753,7 +1753,7 @@ class FirePHP {
      *
      * @category
      * @package     Services_JSON
-     * @author      Michal Migurski <mike-json@teczno.com>
+     * @author      Michal Migurski <mike-JSON@teczno.com>
      * @author      Matt Knapp <mdknapp[at]gmail[dot]com>
      * @author      Brett Stimmerman <brettstimmerman[at]gmail[dot]com>
      * @author      Christoph Dorn <christoph@christophdorn.com>
@@ -1767,7 +1767,7 @@ class FirePHP {
     /**
      * Keep a list of objects as we descend into the array so we can detect recursion.
      */
-    private $json_objectStack = array();
+    private $JSON_objectStack = array();
 
 
    /**
@@ -1781,7 +1781,7 @@ class FirePHP {
     * @return   string  UTF-16 character
     * @access   private
     */
-    private function json_utf82utf16($utf8)
+    private function JSON_utf82utf16($utf8)
     {
         // oh please oh please oh please oh please oh please
         if (function_exists('mb_convert_encoding')) {
@@ -1825,11 +1825,11 @@ class FirePHP {
     * @return   mixed   JSON string representation of input var or an error if a problem occurs
     * @access   public
     */
-    private function json_encode($var)
+    private function JSON_encode($var)
     {
     
         if (is_object($var)) {
-            if (in_array($var,$this->json_objectStack)) {
+            if (in_array($var,$this->JSON_objectStack)) {
                 return '"** Recursion **"';
             }
         }
@@ -1895,7 +1895,7 @@ class FirePHP {
                             // see http://www.cl.cam.ac.uk/~mgk25/unicode.html#utf-8
                             $char = pack('C*', $ord_var_c, ord($var{$c + 1}));
                             $c += 1;
-                            $utf16 = $this->json_utf82utf16($char);
+                            $utf16 = $this->JSON_utf82utf16($char);
                             $ascii .= sprintf('\u%04s', bin2hex($utf16));
                             break;
 
@@ -1906,7 +1906,7 @@ class FirePHP {
                                          ord($var{$c + 1}),
                                          ord($var{$c + 2}));
                             $c += 2;
-                            $utf16 = $this->json_utf82utf16($char);
+                            $utf16 = $this->JSON_utf82utf16($char);
                             $ascii .= sprintf('\u%04s', bin2hex($utf16));
                             break;
 
@@ -1918,7 +1918,7 @@ class FirePHP {
                                          ord($var{$c + 2}),
                                          ord($var{$c + 3}));
                             $c += 3;
-                            $utf16 = $this->json_utf82utf16($char);
+                            $utf16 = $this->JSON_utf82utf16($char);
                             $ascii .= sprintf('\u%04s', bin2hex($utf16));
                             break;
 
@@ -1931,7 +1931,7 @@ class FirePHP {
                                          ord($var{$c + 3}),
                                          ord($var{$c + 4}));
                             $c += 4;
-                            $utf16 = $this->json_utf82utf16($char);
+                            $utf16 = $this->JSON_utf82utf16($char);
                             $ascii .= sprintf('\u%04s', bin2hex($utf16));
                             break;
 
@@ -1945,7 +1945,7 @@ class FirePHP {
                                          ord($var{$c + 4}),
                                          ord($var{$c + 5}));
                             $c += 5;
-                            $utf16 = $this->json_utf82utf16($char);
+                            $utf16 = $this->JSON_utf82utf16($char);
                             $ascii .= sprintf('\u%04s', bin2hex($utf16));
                             break;
                     }
@@ -1958,7 +1958,7 @@ class FirePHP {
                  * As per JSON spec if any array key is not an integer
                  * we must treat the the whole array as an object. We
                  * also try to catch a sparsely populated associative
-                 * array with numeric keys here because some JS engines
+                 * array with numeric keys here because some js engines
                  * will create an array with empty indexes up to
                  * max_index which can cause memory issues and because
                  * the keys, which may be relevant, will be remapped
@@ -1975,13 +1975,13 @@ class FirePHP {
                 // treat as a JSON object
                 if (is_array($var) && count($var) && (array_keys($var) !== range(0, sizeof($var) - 1))) {
                   
-                    $this->json_objectStack[] = $var;
+                    $this->JSON_objectStack[] = $var;
 
-                    $properties = array_map(array($this, 'json_name_value'),
+                    $properties = array_map(array($this, 'JSON_name_value'),
                                             array_keys($var),
                                             array_values($var));
 
-                    array_pop($this->json_objectStack);
+                    array_pop($this->JSON_objectStack);
 
                     foreach($properties as $property) {
                         if ($property instanceof Exception) {
@@ -1992,12 +1992,12 @@ class FirePHP {
                     return '{' . join(',', $properties) . '}';
                 }
 
-                $this->json_objectStack[] = $var;
+                $this->JSON_objectStack[] = $var;
 
                 // treat it like a regular array
-                $elements = array_map(array($this, 'json_encode'), $var);
+                $elements = array_map(array($this, 'JSON_encode'), $var);
 
-                array_pop($this->json_objectStack);
+                array_pop($this->JSON_objectStack);
 
                 foreach($elements as $element) {
                     if ($element instanceof Exception) {
@@ -2010,13 +2010,13 @@ class FirePHP {
             case 'object':
                 $vars = self::encodeObject($var);
 
-                $this->json_objectStack[] = $var;
+                $this->JSON_objectStack[] = $var;
 
-                $properties = array_map(array($this, 'json_name_value'),
+                $properties = array_map(array($this, 'JSON_name_value'),
                                         array_keys($vars),
                                         array_values($vars));
 
-                array_pop($this->json_objectStack);
+                array_pop($this->JSON_objectStack);
               
                 foreach($properties as $property) {
                     if ($property instanceof Exception) {
@@ -2040,7 +2040,7 @@ class FirePHP {
     * @return   string  JSON-formatted name-value pair, like '"name":value'
     * @access   private
     */
-    private function json_name_value($name, $value)
+    private function JSON_name_value($name, $value)
     {
         // Encoding the $GLOBALS PHP array causes an infinite loop
         // if the recursion is not reset here as it contains
@@ -2052,13 +2052,13 @@ class FirePHP {
             $value['GLOBALS'] = '** Recursion **';
         }
     
-        $encoded_value = $this->json_encode($value);
+        $encoded_value = $this->JSON_encode($value);
 
         if ($encoded_value instanceof Exception) {
             return $encoded_value;
         }
 
-        return $this->json_encode(strval($name)) . ':' . $encoded_value;
+        return $this->JSON_encode(strval($name)) . ':' . $encoded_value;
     }
 
     /**

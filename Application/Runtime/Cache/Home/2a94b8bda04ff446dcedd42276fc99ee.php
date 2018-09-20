@@ -8,7 +8,7 @@
 	<p>test functions are as follows:</p>
 	<ul type="square">
 		<li>
-			<a href="index.php?m=Home&c=Rest">Restaurants</a>
+			<a href="<?php echo U('Rest/Index');?>">Restaurants</a>
 		</li>
 	</ul>
 </body>
