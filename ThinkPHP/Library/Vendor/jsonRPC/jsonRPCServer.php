@@ -22,12 +22,12 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 /**
- * This class build a json-RPC Server 1.0
- * http://json-rpc.org/wiki/specification
+ * This class build a JSON-RPC Server 1.0
+ * http://JSON-rpc.org/wiki/specification
  *
- * @author sergio <jsonrpcphp@inservibile.org>
+ * @author sergio <JSONrpcphp@inservibile.org>
  */
-class jsonRPCServer {
+class JSONRPCServer {
 	/**
 	 * This function handle a request binding it to a given object
 	 *
@@ -40,14 +40,14 @@ class jsonRPCServer {
 		if (
 			$_SERVER['REQUEST_METHOD'] != 'POST' || 
 			empty($_SERVER['CONTENT_TYPE']) ||
-			$_SERVER['CONTENT_TYPE'] != 'application/json'
+			$_SERVER['CONTENT_TYPE'] != 'application/JSON'
 			) {
 			// This is not a JSON-RPC request
 			return false;
 		}
 				
 		// reads the input data
-		$request = json_decode(file_get_contents('php://input'),true);
+		$request = JSON_decode(file_get_contents('php://input'),true);
 		
 		// executes the task on local object
 		try {
@@ -75,7 +75,7 @@ class jsonRPCServer {
 		// output the response
 		if (!empty($request['id'])) { // notifications don't want response
 			header('content-type: text/javascript');
-			echo json_encode($response);
+			echo JSON_encode($response);
 		}
 		
 		// finish

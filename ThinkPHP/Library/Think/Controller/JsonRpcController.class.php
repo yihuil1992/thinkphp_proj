@@ -10,9 +10,9 @@
 // +----------------------------------------------------------------------
 namespace Think\Controller;
 /**
- * ThinkPHP JsonRPC控制器类
+ * ThinkPHP JSONRPC控制器类
  */
-class JsonRpcController {
+class JSONRpcController {
 
    /**
      * 架构函数
@@ -23,9 +23,9 @@ class JsonRpcController {
         if(method_exists($this,'_initialize'))
             $this->_initialize();
         //导入类库
-        Vendor('jsonRPC.jsonRPCServer');
+        Vendor('JSONRPC.JSONRPCServer');
         // 启动server
-        \jsonRPCServer::handle($this);
+        \JSONRPCServer::handle($this);
     }
 
     /**

@@ -22,12 +22,12 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 /**
- * The object of this class are generic jsonRPC 1.0 clients
- * http://json-rpc.org/wiki/specification
+ * The object of this class are generic JSONRPC 1.0 clients
+ * http://JSON-rpc.org/wiki/specification
  *
- * @author sergio <jsonrpcphp@inservibile.org>
+ * @author sergio <JSONrpcphp@inservibile.org>
  */
-class jsonRPCClient {
+class JSONRPCClient {
 	
 	/**
 	 * Debug state
@@ -85,7 +85,7 @@ class jsonRPCClient {
 	}
 	
 	/**
-	 * Performs a jsonRCP request and gets the results as an array
+	 * Performs a JSONRCP request and gets the results as an array
 	 *
 	 * @param string $method
 	 * @param array $params
@@ -119,13 +119,13 @@ class jsonRPCClient {
 						'params' => $params,
 						'id' => $currentId
 						);
-		$request = json_encode($request);
+		$request = JSON_encode($request);
 		$this->debug && $this->debug.='***** Request *****'."\n".$request."\n".'***** End Of request *****'."\n\n";
 		
 		// performs the HTTP POST
 		$opts = array ('http' => array (
 							'method'  => 'POST',
-							'header'  => 'Content-type: application/json',
+							'header'  => 'Content-type: application/JSON',
 							'content' => $request
 							));
 		$context  = stream_context_create($opts);
@@ -135,7 +135,7 @@ class jsonRPCClient {
 				$response.= trim($row)."\n";
 			}
 			$this->debug && $this->debug.='***** Server response *****'."\n".$response.'***** End of server response *****'."\n";
-			$response = json_decode($response,true);
+			$response = JSON_decode($response,true);
 		} else {
 			throw new Exception('Unable to connect to '.$this->url);
 		}

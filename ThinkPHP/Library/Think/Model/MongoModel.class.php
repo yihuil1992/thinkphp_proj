@@ -386,7 +386,7 @@ class MongoModel extends Model{
     /**
      * 返回Mongo运行错误信息
      * @access public
-     * @return json
+     * @return JSON
      */
     public function getLastError(){
         return $this->db->command(array('getLastError'=>1));
@@ -395,7 +395,7 @@ class MongoModel extends Model{
     /**
      * 返回指定集合的统计信息，包括数据大小、已分配的存储空间和索引的大小
      * @access public
-     * @return json
+     * @return JSON
      */
     public function status(){
         $option = $this->_parseOptions();

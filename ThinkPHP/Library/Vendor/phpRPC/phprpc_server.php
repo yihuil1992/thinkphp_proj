@@ -67,7 +67,7 @@ class PHPRPC_Server {
     var $cid;
     var $buffer;
     // Private Methods
-    function addJsSlashes($str, $flag) {
+    function addjsSlashes($str, $flag) {
         if ($flag) {
             $str = addcslashes($str, "\0..\006\010..\012\014..\037\042\047\134\177..\377");
         }
@@ -81,7 +81,7 @@ class PHPRPC_Server {
             return base64_encode($str);
         }
         else {
-            return $this->addJsSlashes($str, $flag);
+            return $this->addjsSlashes($str, $flag);
         }
     }
     function encryptString($str, $level) {

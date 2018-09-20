@@ -140,8 +140,8 @@ class ArrayList implements \IteratorAggregate {
         }
     }
 
-    public function toJson() {
-        return json_encode($this->_elements);
+    public function toJSON() {
+        return JSON_encode($this->_elements);
     }
 
     /**

@@ -788,8 +788,8 @@ class Model {
                 return call_user_func($type,$data);
             }
             switch (strtolower($type)){
-                case 'json':
-                    return json_encode($data);
+                case 'JSON':
+                    return JSON_encode($data);
                 case 'xml':
                     return xml_encode($data);
             }

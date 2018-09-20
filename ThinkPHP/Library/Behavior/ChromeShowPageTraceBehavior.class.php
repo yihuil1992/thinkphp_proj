@@ -254,7 +254,7 @@ class ChromePhp{
     /**
      * @var array
      */
-    protected $_json = array(
+    protected $_JSON = array(
         'version' => self::VERSION,
         'columns' => array('log', 'backtrace', 'type'),
         'rows' => array()
@@ -296,7 +296,7 @@ class ChromePhp{
     {
         $this->_php_version = phpversion();
         $this->_timestamp = $this->_php_version >= 5.1 ? $_SERVER['REQUEST_TIME'] : time();
-        $this->_json['request_uri'] = $_SERVER['REQUEST_URI'];
+        $this->_JSON['request_uri'] = $_SERVER['REQUEST_URI'];
     }
 
     /**
@@ -548,8 +548,8 @@ class ChromePhp{
 
         $row = array($logs, $backtrace, $type);
 
-        $this->_json['rows'][] = $row;
-        $this->_writeHeader($this->_json);
+        $this->_JSON['rows'][] = $row;
+        $this->_writeHeader($this->_JSON);
     }
 
     protected function _writeHeader($data)
@@ -565,7 +565,7 @@ class ChromePhp{
      */
     protected function _encode($data)
     {
-        return base64_encode(utf8_encode(json_encode($data)));
+        return base64_encode(utf8_encode(JSON_encode($data)));
     }
 
     /**

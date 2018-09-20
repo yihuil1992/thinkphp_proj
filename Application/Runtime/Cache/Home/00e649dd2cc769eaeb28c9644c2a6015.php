@@ -5,11 +5,11 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNBFH1IlNnjDNnu12pe009XUbEgCdyDEY&language=en&region=US&callback=initMap"
     async defer></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="/Application/Home/Public/Js/getDistance.js"></script>
-<link rel="stylesheet" type="text/css" href="/Application/Home/Public/CSS/stylesheet.css" />
+<script type="text/javascript" src="/thinkphp/Public/js/getDistance.js"></script>
+<link rel="stylesheet" type="text/css" href="/thinkphp/Public/css/stylesheet.css" />
 </head>
 <body>
-<a href="/index.php/Home/Rest" style="position:absolute;right:5px;top: 5px;">Restuarants</a>
+<a href="/thinkphp/index.php/Home/Rest" style="position:absolute;right:5px;top: 5px;">Restuarants</a>
 <h1>This a google Map Module.</h1>
 <p>please select three points for calculating distance:</p>
 <div id="map"></div>

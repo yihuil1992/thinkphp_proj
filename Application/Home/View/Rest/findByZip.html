@@ -2,13 +2,13 @@
 <html>
 <head>
 <load href='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' />
-<load href='__PUBLIC__/Js/findByZip.js' />
-<load href='__PUBLIC__/CSS/stylesheet.css' />
+<load href='__PUBLIC__/js/findByZip.js' />
+<load href='__PUBLIC__/css/stylesheet.css' />
 	<title>Find Restaurants</title>
 	<meta charset="utf-8">
 </head>
 <body>
-<a href="__CONTROLLER__" style="position:absolute;right:5px;top: 5px;">Restuarants</a>
+<a href="{:U('index')}" style="position:absolute;right:5px;top: 5px;">Restuarants</a>
 <form id="dataForm" action="" method="POST" onsubmit="return validate()">
 	<ul>
 		<li>
