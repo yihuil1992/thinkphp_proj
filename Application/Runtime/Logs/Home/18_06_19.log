@@ -1,0 +1,585 @@
+[ 2018-06-19T00:27:33+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000263s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000020s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000038s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003537s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003551s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000322s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000335s ]
+
+[ 2018-06-19T00:27:49+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000157s ]
+
+[ 2018-06-19T00:27:50+08:00 ] ::1 /index.php?m=Home&c=Rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000199s ]
+
+[ 2018-06-19T00:27:52+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+
+[ 2018-06-19T00:27:54+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000176s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000188s ]
+ERR: 无法加载数据库驱动: Think\Db\Driver\
+
+[ 2018-06-19T00:29:12+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+
+[ 2018-06-19T00:29:15+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000181s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000194s ]
+ERR: SQLSTATE[HY000] [2002] No such file or directory
+
+[ 2018-06-19T00:30:50+08:00 ] ::1 /index.php/Home/Rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+
+[ 2018-06-19T00:30:52+08:00 ] ::1 /index.php/Home/Rest/googleMap
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+
+[ 2018-06-19T00:31:08+08:00 ] ::1 /index.php/Home/Rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+
+[ 2018-06-19T00:31:09+08:00 ] ::1 /index.php/Home/Rest/findByAddr
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+
+[ 2018-06-19T00:31:16+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000183s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000196s ]
+ERR: SQLSTATE[HY000] [2002] No such file or directory
+
+[ 2018-06-19T00:31:23+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000216s ]
+ERR: SQLSTATE[HY000] [2002] No such file or directory
+
+[ 2018-06-19T00:31:25+08:00 ] ::1 /index.php/Home/Rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+
+[ 2018-06-19T00:31:26+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+
+[ 2018-06-19T00:32:26+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000183s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000195s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0010s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02120 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T00:32:34+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000211s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000225s ]
+ERR: SQLSTATE[HY000] [2002] No such file or directory
+
+[ 2018-06-19T00:32:44+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000236s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0010s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02120 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T00:32:48+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000205s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0010s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02134 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T00:32:51+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0011s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02111 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T00:32:55+08:00 ] ::1 /index.php/Home/Rest/restPage?id=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+
+[ 2018-06-19T00:32:57+08:00 ] ::1 /index.php/Home/Rest/payment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000140s ]
+
+[ 2018-06-19T00:33:02+08:00 ] ::1 /index.php/Home/Rest/payment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+
+[ 2018-06-19T03:48:36+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000161s ]
+
+[ 2018-06-19T03:48:39+08:00 ] ::1 /index.php?m=Home&c=Rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+
+[ 2018-06-19T03:48:43+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000156s ]
+
+[ 2018-06-19T03:48:49+08:00 ] ::1 /index.php/Home/Rest/findByAddr
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000156s ]
+
+[ 2018-06-19T03:49:01+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000226s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0012s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02116 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T03:49:15+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000165s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000238s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0011s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02111 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T03:49:24+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000217s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000231s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0011s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02111 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T03:49:34+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000223s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0010s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02111 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T03:49:37+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000212s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000226s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0010s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02116 )  [ RunTime:0.0002s ]
+
+[ 2018-06-19T03:49:41+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000211s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000225s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0009s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02111 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T03:49:51+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000213s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000236s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0012s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02111 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T03:49:56+08:00 ] ::1 /index.php/Home/Rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+
+[ 2018-06-19T03:49:59+08:00 ] ::1 /index.php/Home/Rest/googleMap
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000158s ]
+
+[ 2018-06-19T03:50:05+08:00 ] ::1 /index.php/Home/Rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+
+[ 2018-06-19T03:50:06+08:00 ] ::1 /index.php/Home/Rest/findByAddr
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000162s ]
+
+[ 2018-06-19T03:50:16+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000176s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000189s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0011s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02120 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T03:50:32+08:00 ] ::1 /index.php/Home/Rest/restPage?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000165s ]
+
+[ 2018-06-19T03:52:46+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000183s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000194s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0011s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02111 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T03:52:53+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000228s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0011s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02111 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T03:53:30+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000214s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0010s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02111 )  [ RunTime:0.0002s ]
+
+[ 2018-06-19T03:57:05+08:00 ] ::1 /index.php/Home/Rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000159s ]
+
+[ 2018-06-19T03:57:06+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000156s ]
+
+[ 2018-06-19T03:57:09+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000210s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0010s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02120 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T03:57:16+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000219s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0009s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02134 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T03:57:21+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000168s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000229s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000243s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0009s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02111 )  [ RunTime:0.0002s ]
+
+[ 2018-06-19T03:57:28+08:00 ] ::1 /index.php/Home/Rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+
+[ 2018-06-19T03:57:30+08:00 ] ::1 /index.php/Home/Rest/findByAddr
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000155s ]
+
+[ 2018-06-19T03:57:43+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000203s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000218s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0009s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02111 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T04:01:00+08:00 ] ::1 /index.php/Home/Rest/findByAddr
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+
+[ 2018-06-19T04:01:05+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000176s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000189s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0010s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02111 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T04:08:04+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000178s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000190s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0009s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02111 )  [ RunTime:0.0004s ]
+
+[ 2018-06-19T04:08:05+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000191s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000204s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0009s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02120 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T04:08:24+08:00 ] ::1 /index.php/Home/Rest/findByAddr
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+
+[ 2018-06-19T04:08:28+08:00 ] ::1 /index.php/Home/Rest/findByAddr
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000137s ]
+
+[ 2018-06-19T04:09:01+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000219s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0009s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02120 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T04:28:38+08:00 ] ::1 /index.php/Home/Rest/findByAddr
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+
+[ 2018-06-19T04:28:44+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000200s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000214s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0010s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02111 )  [ RunTime:0.0002s ]
+
+[ 2018-06-19T04:28:54+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000203s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000217s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0009s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02111 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T04:28:54+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000289s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0009s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02120 )  [ RunTime:0.0002s ]
+
+[ 2018-06-19T04:28:55+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000205s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0009s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02120 )  [ RunTime:0.0002s ]
+
+[ 2018-06-19T04:28:56+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000207s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0009s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02120 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T04:28:57+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000205s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0009s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02120 )  [ RunTime:0.0002s ]
+
+[ 2018-06-19T04:28:58+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000238s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0010s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02120 )  [ RunTime:0.0002s ]
+
+[ 2018-06-19T04:28:59+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000191s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000204s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0009s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02120 )  [ RunTime:0.0002s ]
+
+[ 2018-06-19T04:28:59+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000210s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0010s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02120 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T04:29:00+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000206s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0010s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02120 )  [ RunTime:0.0002s ]
+
+[ 2018-06-19T04:29:01+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000209s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0009s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02120 )  [ RunTime:0.0003s ]
+
+[ 2018-06-19T04:29:01+08:00 ] ::1 /index.php/Home/Rest/findByZip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000191s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000204s ]
+SQL: SHOW COLUMNS FROM `restaurants` [ RunTime:0.0009s ]
+SQL: SELECT restaurants.rest_id,`rest_name`,`rest_addr` FROM `restaurants` INNER JOIN restandzip on restaurants.rest_id = restandzip.rest_id  WHERE ( zipcode = 02120 )  [ RunTime:0.0002s ]
+
+[ 2018-06-19T06:05:14+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+
+[ 2018-06-19T06:36:03+08:00 ] ::1 /test/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000195s ]
+
+[ 2018-06-19T06:44:02+08:00 ] ::1 /test/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+
+[ 2018-06-19T11:59:46+08:00 ] ::1 /test/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+

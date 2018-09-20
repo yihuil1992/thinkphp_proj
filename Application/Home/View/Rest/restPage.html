@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<load href='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' />
+<load href='__PUBLIC__/Js/restPage.js' />
+<load href='__PUBLIC__/CSS/stylesheet.css' />
+	<title>Restaurant Page</title>
+</head>
+<body>
+	<a href="__CONTROLLER__" style="position:absolute;right:5px;top: 5px;">Restuarants</a>
+	<h1>Welcome to {$data.rest_name}</h1>
+	<p>Id: {$data.rest_id}<br>Addr: {$data.rest_addr}<br>Price: <ins id="price">{$data.rest_price}</ins></p>
+	<table>
+		<tr>
+			<th>Functions:</th>
+		</tr>
+		<tr>
+			<td><button onclick="alipay()">Pay with Alipay</button></td>
+		</tr>
+		<tr>
+			<td><button onclick="wechat()">Pay with WeChat Pay</button></td>
+		</tr>
+		<tr>
+			<td><button onclick="exportExcel()">Export transaction log</button></td>
+		</tr>
+	</table>
+	<form action="payment" method="POST" id="payform">
+		<input type="hidden" name="transaction_id" value="test1236"/>
+		<input type="hidden" name="payment_method" id="payment_method"/>
+		<input type="hidden" name="amount" id="amount"/>
+	</form>
+</body>
+</html>

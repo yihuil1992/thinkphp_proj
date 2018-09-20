@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<load href='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' />
+<load href='__PUBLIC__/Js/findByZip.js' />
+<load href='__PUBLIC__/CSS/stylesheet.css' />
+	<title>Find Restaurants</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<a href="__CONTROLLER__" style="position:absolute;right:5px;top: 5px;">Restuarants</a>
+<form id="dataForm" action="" method="POST" onsubmit="return validate()">
+	<ul>
+		<li>
+			<input type="number" id="zip" name="zipcode" placeholder="Input your zipcode">
+		</li>
+		<li>
+			<input type="submit" value="Submit">
+		</li>
+	</ul>
+</form>
+<div class="result" id="resultForm">
+	Restuarants will be shown here
+</div>
+
+</body>
+</html>
