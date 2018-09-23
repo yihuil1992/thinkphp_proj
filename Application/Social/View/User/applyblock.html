@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Applying</title>
+</head>
+<body>
+    <switch name="status">
+        <case value="0">You have submitted the apply before, please wait for others accepting your apply.</case>
+        <case value="1">Apply submitted successfully! Please wait for others accepting your apply.</case>
+        <case value="2">Congratulations! You are the first person in this block.<br>
+                        So your application is approved automatically.
+        </case>
+    </switch>
+    <p>Go back to <a href="{:U('index')}">user page</a></p>
+</body>
+</html>

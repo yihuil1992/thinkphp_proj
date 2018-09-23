@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Friends</title>
+    <load href='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'/>
+</head>
+<body style="height:100%">
+
+<div class="header">
+    <p>Go back to <a href="{:U('index')}">user page</a></p>
+</div>
+<div class="content" style="min-height: 100%;">
+    <div id="friend_list" style="float: left; width: 50%;">
+        <b>Request of friend invitation:</b><br>
+        <volist name="friend_request" id="request" empty="no request">
+            <p>Name: {$request.user_name}, Description: {$request.description}</p>
+            <button type="button" class="accept" value="{$request.user_id}">Accept</button>
+            <button type="button" class="delete" value="{$request.user_id}">Decline</button>
+        </volist>
+        <br><b>Current friends:</b><br>
+        <volist name="friend_list" id="friend" empty="no friend yet">
+            <p>Name: {$friend.user_name}， Description: {$friend.description}</p>
+            <button type="button" class="delete" value="{$friend.user_id}">Delete</button>
+        </volist>
+        <br><b>Applying friends:</b><br>
+        <volist name="applying_friend" id="applying" empty="no applying friend">
+            <p>Name: {$applying.user_name}， Description: {$applying.description}</p>
+            <button type="button" class="delete" value="{$applying.user_id}">Cancel</button>
+        </volist>
+    </div>
+
+    <div id="adding_friend" style="float: left; width: 50%;">
+        <b>Add a friend in your blocks:</b><br>
+        <volist name="block_list" id="block_person" empty="no valid person">
+            <p>Name: {$block_person.user_name}, Description: {$block_person.description}</p>
+            <button type="button" class="request" value="{$block_person.user_id}">Send request</button>
+        </volist>
+        <br><b>Or search a friend by email:</b>
+        <br><input type="text" id="search_email" placeholder="input a email address">
+        <button type="button" id="search">Search</button>
+        <div id="result" style="float: top;height: 150px;border: 1px solid black;">
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script type="text/javascript">
+    $('.accept').bind('click', function () {
+        var user_id = $(this).val();
+        $.ajax({
+            type: 'post',
+            url: "{:U('acceptRequest')}",
+            data: {
+                user_id: user_id,
+            },
+            error: function (request) {
+                console.log('Connection error:' + request.error);
+            },
+            success: function (data) {
+                var response = JSON.parse(data);
+                if (response == 'ok') {
+                    location.reload();
+                } else {
+                    console.log('Something error: ' + response);
+                }
+            }
+        });
+    });
+
+    $('.delete').bind('click', function () {
+        var user_id = $(this).val();
+        $.ajax({
+            type: 'post',
+            url: "{:U('deleteFriend')}",
+            data: {
+                user_id: user_id,
+            },
+            error: function (request) {
+                console.log('Connection error:' + request.error);
+            },
+            success: function (data) {
+                var response = JSON.parse(data);
+                if (response == 'ok') {
+                    location.reload();
+                } else {
+                    console.log('Something error: ' + response);
+                }
+            }
+        });
+    });
+
+    $('.request').bind('click', function () {
+        var user_id = $(this).val();
+        request(user_id);
+    });
+
+    function request(user_id) {
+        $.ajax({
+            type: 'post',
+            url: "{:U('sendRequest')}",
+            data: {
+                user_id: user_id,
+            },
+            error: function (request) {
+                console.log('Connection error:' + request.error);
+            },
+            success: function (data) {
+                var response = JSON.parse(data);
+                if (response == 'ok') {
+                    location.reload();
+                } else {
+                    console.log('Something error: ' + response);
+                }
+            }
+        });
+    }
+
+    $('#search').bind('click', function () {
+        var email = $('#search_email').val().trim();
+        var regExp = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+        if (!regExp.test(email)) {
+            $('#result').html('Please input a valid email address');
+        } else {
+            $.ajax({
+                type: 'post',
+                url: '{:U("searchByEmail")}',
+                data: {email: email},
+                error: function (request) {
+                    console.log('Connection error:' + request.error);
+                },
+                success: function (data) {
+                    var response = JSON.parse(data);
+                    if (response['status'] == 'ok') {
+                        var user = response['user'];
+                        $('#result').html('<p>Name: ' + user['user_name']+ ', Description: ' + user['description'] + '</p>' +
+                            '<br>' +
+                            '<button id="extra_button" type="button" onclick="request(' + user['user_id'] + ')">Send Request</button>')
+                    } else {
+                        $('#result').html('Something error: ' + response['msg']);
+                    }
+                }
+            });
+        }
+
+    });
+
+</script>
+</html>

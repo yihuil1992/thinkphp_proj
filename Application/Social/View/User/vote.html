@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vote</title>
+    <load href='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' />
+</head>
+<body>
+<if condition="$user_list neq null">
+    <volist name="user_list" id="applicant">
+        <p>name: {$applicant.user_name}</p>
+        <p>description: {$applicant.description}</p>
+        <button type="button" class="accept" value="{$applicant.app_id}">Accept</button>
+        <button type="button" class="decline" value="{$applicant.app_id}">Decline</button>
+    </volist>
+</if>
+
+<p>Go back to <a href="{:U('index')}">user page</a></p>
+</body>
+<script type="text/javascript">
+    $('.accept').bind('click', function () {
+        var app_id = $(this).val();
+        $.ajax({
+            type: 'POST',
+            url: '{:U("")}',
+            data: {
+                app_id: app_id,
+                action: 'accept',
+            },
+            error: function (request) {
+                console.log('Connection error:' + request.error);
+            },
+            success: function (data) {
+                var response = JSON.parse(data);
+                if (response == "ok") {
+                    location.reload();
+                }
+            }
+        })
+    });
+    $('.decline').bind('click', function () {
+        var app_id = $(this).val();
+        $.ajax({
+            type: 'POST',
+            url: '{:U("")}',
+            data: {
+                app_id: app_id,
+                action: 'decline',
+            },
+            error: function (request) {
+                console.log('Connection error:' + request.error);
+            },
+            success: function (data) {
+                var response = JSON.parse(data);
+                if (response == "ok") {
+                    location.reload();
+                }
+            }
+        })
+    });
+</script>
+</html>

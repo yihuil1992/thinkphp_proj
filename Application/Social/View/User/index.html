@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <load href='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'/>
+</head>
+<body>
+<div class="header">
+    <button type="button" id="home_page">Home page</button>
+    <button type="button" id="log_out">Log out</button>
+</div>
+<h1>Welcome, {$user.user_name}!</h1>
+
+<if condition="$vote_wating neq null">
+    <p>There are people that want to join your block, click <a href="{:U('vote')}">here</a> to vote for that.</p>
+</if>
+
+<p>You can:</p>
+
+<a href="{:U('friends')}">Manage your friends</a>
+
+</body>
+<script type="text/javascript">
+    $('#log_out').bind('click', function () {
+        $(location).attr('href', "{:U('logout')}");
+    })
+    $('#home_page').bind('click', function () {
+        $(location).attr('href', "{:U('Index/index')}");
+    })
+</script>
+</html>

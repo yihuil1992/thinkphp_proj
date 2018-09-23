@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up result</title>
+</head>
+<body>
+<if condition="$response.code eq 0">
+    <p>Sorry, {$response.msg}</p>
+    <a href="{:U('signUp')}">Back to sign up page</a>
+    <else/>
+    <p>Welcome, {$user.user_name}!</p>
+    <p>Please <a href="{:U('login')}">log in your account here</a>, or</p>
+    <a href="{:U('Index/index')}">Go to home page</a>
+</if>
+</body>
+</html>

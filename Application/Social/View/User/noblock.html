@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>No Block</title>
+    <load href='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' />
+</head>
+<body>
+<h1>Welcome back, {$user.user_name}!</h1>
+<if condition="$is_applying neq null">
+    <p>Your apply of block {$is_applying.block_id} is on process.</p>
+    <else/>
+    <p>You doesn't belong to any block, please <a href="{:U('applyBlock')}">click here to apply to be a member of your block.</a></p>
+</if>
+<br><button type="button" id="log_out">Log out</button>
+</body>
+<script type="text/javascript">
+    $('#log_out').bind('click', function () {
+        $(location).attr('href', "{:U('logout')}");
+    })
+</script>
+</html>

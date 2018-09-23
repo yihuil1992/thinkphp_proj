@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+</head>
+<body>
+<form action="{:U('')}" method='post'>
+    <table border='0'>
+        <tr>
+            <td>Your email address</td>
+            <td align='left'><input type='text' name='email' size='20' maxlength='20' /></td>
+        </tr>
+        <tr>
+            <td>Your password</td>
+            <td align='left'><input type='password' name='password' size='20' maxlength='10' /></td>
+        </tr>
+        <tr>
+            <td>Your name</td>
+            <td align='left'><input type='text' name='user_name' size='20' maxlength='20' /></td>
+        </tr>
+        <tr>
+            <td>Your address's number</td>
+            <td align='left'><input type='number' name='number' size='20' maxlength='20' placeholder="integer between 1 to 600"/></td>
+        </tr>
+        <tr>
+            <td>Your address's street</td>
+            <td align='left'><input type='number' name='street' size='20' maxlength='20' placeholder="integer between 1 to 50"/></td>
+        </tr>
+        <tr>
+            <td>Your description</td>
+            <td align='left'><input type='text' name='description' size='50' maxlength='100' placeholder="optional"/></td>
+        </tr>
+        <tr>
+            <td>Your photo</td>
+            <td align='left'><input type='text' name='photo' size='50' maxlength='500' placeholder="URL, optional"/></td>
+        </tr>
+
+        <tr>
+            <td colspan='2' align='center'><input type ='submit' value='Submit'/></td>
+        </tr>
+
+    </table>
+</form>
+<a href="{:U('Index/index')}" >Go back to home page</a>
+</br>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+    <if condition="$response.code eq 0">
+        <p>Sorry, {$response.msg}</p>
+        <a href="{:U('login')}">Back to login page</a>
+        <else/>
+        <p>Welcome back, {$user.user_name}!</p>
+        <a href="{:U('Index/index')}">Go to home page</a>
+    </if>
+</body>
+</html>

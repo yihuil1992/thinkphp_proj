@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Topics</title>
+    <load href='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'/>
+</head>
+<body>
+
+<div class="header">
+    <button type="button" id="log_out">Log out</button>
+    <button type="button" id="user_page">User page</button>
+</div>
+<select id="topic_subjects">
+    <volist name="subjects" id="subject">
+        <option value="{$subject.sub_id}">{$subject.sub_description}</option>
+    </volist>
+</select><br>
+<textarea id="new_topic" style="width: 350px;height: 50px;"
+          placeholder="Write down what you want to tell your neighboors.."></textarea><br>
+<button type="button" id="post_topic">Post your topic</button>
+<volist name="topic_list" id="topic" empty="No topics">
+    <p>[{$topic.sub_description}] <span class="topic_title" style="white-space: pre-wrap;">{$topic.title}</span></p>
+    <p>From <b>{$topic.user_name}</b>, {$topic.date_created}
+        <if condition="$topic['user_id'] eq $user['user_id']">
+            <button class="del_topic" type="button" value="{$topic.topic_id}">Delete Topic</button>
+        </if>
+    </p>
+    <volist name="topic.reply" id="reply">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="reply_text" style="white-space: pre-wrap;">{$reply.text}</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--<b>{$reply.user_name}</b>, {$reply.create_time}
+            <if condition="$user['user_id'] eq $reply['user_id']">
+                <button class="del_reply" type="button" value="{$reply.msg_id}">Delete Reply</button>
+            </if>
+        </p>
+    </volist>
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="reply_text" placeholder="input your reply" id="reply"/>
+    <button type="button" value="{$topic.topic_id}" class="reply_button">Reply</button>
+</volist>
+
+</body>
+<script type="text/javascript">
+    $('#post_topic').bind('click', function () {
+        var sub_id = $('#topic_subjects').val();
+        var title = $('#new_topic').val().trim();
+        $.ajax({
+            type: 'post',
+            url: "{:U('postTopic')}",
+            data: {
+                title: title,
+                sub_id: sub_id
+            },
+            error: function (request) {
+                console.log('Connection error:' + request.error);
+            },
+            success: function (data) {
+                var response = JSON.parse(data);
+                if (response == 'ok') {
+                    location.reload();
+                } else {
+                    console.log('Something error: ' + response);
+                }
+            }
+        });
+    });
+
+    $('.reply_button').bind('click', function () {
+        var reply_text = $(this).prev('.reply_text').val().trim();
+        var topic_id = $(this).val();
+        $.ajax({
+            type: 'post',
+            url: "{:U('reply')}",
+            data: {
+                reply_text: reply_text,
+                topic_id: topic_id,
+            },
+            error: function (request) {
+                console.log('Connection error:' + request.error);
+            },
+            success: function (data) {
+                var response = JSON.parse(data);
+                if (response == 'ok') {
+                    location.reload();
+                } else {
+                    console.log('Something error: ' + response);
+                }
+            }
+        });
+    });
+    $('.del_topic').bind('click', function () {
+        var topic_id = $(this).val();
+        $.ajax({
+            type: 'post',
+            url: "{:U('delTopic')}",
+            data: {
+                topic_id: topic_id,
+            },
+            error: function (request) {
+                console.log('Connection error:' + request.error);
+            },
+            success: function (data) {
+                var response = JSON.parse(data);
+                if (response == 'ok') {
+                    location.reload();
+                } else {
+                    console.log('Something error: ' + response);
+                }
+            }
+        });
+    });
+    $('.del_reply').bind('click', function () {
+        var msg_id = $(this).val();
+        $.ajax({
+            type: 'post',
+            url: "{:U('delReply')}",
+            data: {
+                msg_id: msg_id,
+            },
+            error: function (request) {
+                console.log('Connection error:' + request.error);
+            },
+            success: function (data) {
+                var response = JSON.parse(data);
+                if (response == 'ok') {
+                    location.reload();
+                } else {
+                    console.log('Something error: ' + response);
+                }
+            }
+        });
+    });
+
+    $('#log_out').bind('click', function () {
+        $(location).attr('href', "{:U('User/logout')}");
+    })
+    $('#user_page').bind('click', function () {
+        $(location).attr('href', "{:U('User/index')}");
+    })
+</script>
+</html>
